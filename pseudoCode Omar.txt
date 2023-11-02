@@ -1,0 +1,121 @@
+
+
+
+[Logic 2] Logic for Parts 1 & 2 (Cover Charges and Ticket Charges)
+
+
+
+
+
+#VARIABLES:
+-DayTime = GetTimeOfaCdnGLobalClock
+-People = 0
+-ChildPA = 0.75
+-AdultPA = 4.00
+-SeniorPA = 1.50
+-MusicTicket = 70
+-TheaterTicket= 55
+-ChildT = 0
+-AdultT = 0
+-SeniorT = 0
+-TicketsCuant = 
+-SubtotalCover = (ChildP*ChildT)+(AdultT*AdultP)+(SeniorP*SeniorT)
+-SubtotalTickets = 0
+-SubtotalGroceries= 0 
+-Subtotalvallet = 0
+-GeneralSubtotal = SubtotalCover + SubtotalTickets + Subtotalvallet
+-Discount2 = .05
+-Discount3 = .15
+-Discount4 = .20
+-Discount5 = .30
+-nonAlcP = 2.25
+-AlcP = 7.50
+-CandyP = 1.75
+-Totaldiscount = 0
+-Total = GeneralSubtotal - (GeneralSubtotal*Totaldiscount)
+-vipCar = 15
+-Car = 10
+
+
+#SubProcess Cover Charges
+
+1.0 Ask user for the number of childrens and store the value in -ChildT
+    1.1 Then calculate Pople = People + ChildT
+2.0 Ask user for the number of adults and store the value in -AdultT
+    2.1 Then calculate Pople = People + AdultT
+3.0 Ask user for the number of seniors and store the value in -SeniorT
+    3.1 Then calculate Pople = People + SeniorT
+4.0 Print Bill
+
+
+#SubProcess Ticket Charges
+1.0 User chosee a show
+2.0 DayTime is > 18:00 and DayTime < 9:00?
+    1.1Yes: Set MusicTicket = 150 and TheaterTicket = 115 then continue to step 2
+    1.2No: continue to step 2
+3.0 Show is a musical?
+    3.1 Yes: 
+       3.1.0 Ask user for quatity of tickets and store it in TicketsCuant.
+       3.1.1 Set SubtotalTickets = SubtotalTickets + (TicketsCuant * MusicTicket)
+    3.2 NO:
+      3.2.0 Ask user for quatity of tickets and store it in TicketsCuant.
+      3.2.1 Set SubtotalTickets = SubtotalTickets + (TicketsCuant * TheaterTicket)
+4.Exit Subprocess
+
+#SubProcess Discounts
+1.0 People is Bigger than 5?
+    Yes: Totaldiscount = Discount5 go to step #5.0
+    No: Continue
+2.0 People is Bigger than 4?
+    Yes: Totaldiscount = Discount4 go to step #5.0
+    No: Continue
+3.0 People is Bigger than 3?
+    Yes: Totaldiscount = Discount3 go to step #5.0
+    No: Continue
+4.0 People is Bigger than 2?
+    Yes: Totaldiscount = Discount2 go to step #5.0
+    No: Continue
+5.0 Exit SubProcess
+
+#SubProcess SnackCharges
+1.0 Ask user for product
+2.0 User click Continue?
+    Yes: ExitSubprocess
+    NO: continue
+3.0 Product is softdrink?
+    Yes: SubtotalGorceries = SubtotalGorceries + nonAlcP and Continue to step #4.0
+    No: continue
+3.0 Product is Alcoholic Drink?
+    Yes: SubtotalGorceries = SubtotalGorceries + AlcP and Continue to step #4.0
+    No: continue
+3.0 Product is Candy?
+    Yes: SubtotalGorceries = SubtotalGorceries + Candy and Continue to step #4.0
+    No: continue
+4.0 Go to back to step 1.0
+
+#SubPorcess Valet Parking
+1.0 User enters to the ballet parking section
+2.0 DayTime is > 18:00 and DayTime < 9:00?
+    1.1Yes: Set vipCar = 30 and Car = 20 then continue to step 2
+    1.2No: continue to step 2
+3.0 Ask for type of service?
+    3.1 User choose vip? 
+       3.1.0 Subtotalvallet = Subtotalvallet + vipCar
+       3.1.1 Subtotalvallet = SubtotalTickets + Car
+4.0 Ask user for another car
+5.0 User Select yes?
+        5.1 Go Back to step #3.0
+6.0 Exit Module
+
+
+#Subprocess PrintTicket
+1.0 User enter to print the ticket
+2.0 Show the user the SubtotalTickets variable as Tickets Charges
+3.0 Show the user the SubtotalGroceries varieble as Gorceries Charges
+4.0 Show the user the Subtotalvallet variable as vallet Charges
+5.0 Show the user the SubtotalCover variable as Cover Charges
+6.0 Show the user the GeneralSubtotal as Sub total
+7.0 Show the user the Totaldiscount variable as Discounts apllies
+8.0 Show the user the Total as total cherges with discounts apply
+
+

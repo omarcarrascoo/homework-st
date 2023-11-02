@@ -1,0 +1,75 @@
+Test Cases
+
+
+
+DAYTIME: 19:00
+
+-SubtotalTickets = 300
+-SubtotalGroceries= 2.25 
+-Subtotalvallet = 15
+-SubtotalCover = 0
+-GeneralSubtotal= 317.25
+-Totaldiscount: 0
+-Total: 317.25
+
+1.0 User enters to the aplication
+2.0 User enters to the ticket charges Module
+3.0 User choose a musical
+4.0 User ask 2 Tickets
+5.User enter to subprocess SnackCharges
+6.0 User ask for a softdrink
+7.0 User Click Exit
+8.0 User enter to valet parking Module
+9.0 User select vip
+10.0 user exit Module
+11.0 user go to pay and enter to dicuount sub modules automaticly
+12.0 User get data (SubtotalTickets, SubtotalGroceries, Subtotalvallet, SubtotalCover, GeneralSubtotal, Totaldiscount, Total)
+
+
+DAYTIME: 19:00
+
+-SubtotalTickets = 450
+-SubtotalGroceries= 2.25 
+-Subtotalvallet = 15
+-SubtotalCover = 0
+-GeneralSubtotal= 467.25
+-Totaldiscount: 23.36
+-Total: 443.88
+
+1.0 User enters to the aplication
+2.0 User enters to the ticket charges Module
+3.0 User choose a musical
+4.0 User ask 2 Tickets
+5.User enter to subprocess SnackCharges
+6.0 User ask for a softdrink
+7.0 User Click Exit
+8.0 User enter to valet parking Module
+9.0 User select vip
+10.0 user exit Module
+11.0 user go to pay and enter to dicuount sub modules automaticly
+12.0 User get data (SubtotalTickets, SubtotalGroceries, Subtotalvallet, SubtotalCover, GeneralSubtotal, Totaldiscount, Total)
+
+
+DAYTIME: 14:00
+
+-SubtotalTickets = 275
+-SubtotalGroceries= 1.75 
+-Subtotalvallet = 15
+-SubtotalCover = 0
+-GeneralSubtotal= 291.75
+-Totaldiscount: 87.52
+-Total: 203.99
+
+1.0 User enters to the aplication
+2.0 User enters to the ticket charges Module
+3.0 User choose a theaher
+4.0 User ask 5 Tickets
+5.User enter to subprocess SnackCharges
+6.0 User ask for a candy
+7.0 User Click Exit
+8.0 User enter to valet parking Module
+9.0 User select vip
+10.0 user exit Module
+11.0 user go to pay and enter to dicuount sub modules automaticly
+12.0 User get data (SubtotalTickets, SubtotalGroceries, Subtotalvallet, SubtotalCover, GeneralSubtotal, Totaldiscount, Total)
+
